@@ -26,26 +26,39 @@
 
 // MY CODE STARTS HERE         /////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+// math.h
 
 #include <stdio.h>
 
 #ifndef MATH_H_
 #define MATH_H_
 
+// The following math function only work with integers
+// Fractions/Decimals cannot be used
+
 int math(int num1, int num2, char Operator);
+
+
+#endif /* MATH_H_ */
+
+// Implementation file
+// math.c
 
 
 int math(int num1, int num2, char Operator)
 {
-   
-   int Result;
+
+    int Result;
     
+// Symbols for operators for each operation must be entered 
+// exactly as shown below (under switch statement)
+
     switch(Operator)
     {
         +: // If operator entered is a "+", perform addition 
         
            Result = num1 + num2;
+           printf(num1 "+" num2 "="
         
         -: // If operator entered is a "-", perform subtraction 
 
