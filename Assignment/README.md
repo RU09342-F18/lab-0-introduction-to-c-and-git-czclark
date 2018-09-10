@@ -50,7 +50,7 @@ int math(int num1, int num2, char Operator);
 // math.c
 
 
-int math(int num1, int num2, char Operator) // 
+int math(int num1, int num2, char Operator) 
 {
 
     int Result; // Holds solution to operation described in arguments
