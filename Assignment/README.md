@@ -21,35 +21,51 @@
  * ~ Bitwise Inverse (~num1) for this operation, num1 and num2 are still needed
 */
 
+//Part of your documentation should be listing the valid inputs and outputs for the functions you create.
+
+
+// MY CODE STARTS HERE         /////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 #include <stdio.h>
 
 #ifndef MATH_H_
 #define MATH_H_
 
-//Part of your documentation should be listing the valid inputs and outputs for the functions you create.
+
 int math(int num1, int num2, char Operator)
 {
-    int Result;
+   
+   int Result;
     
     switch(Operator)
     {
-        +:
+        +: // If operator entered is a "+", perform addition 
         
-        -:
+        -: // If operator entered is a "-", perform subtraction 
         
-        *:
+        *: // If operator entered is a "*", perform multiplication 
         
-        /:
+        /: // If operator entered is a "/", perform division 
         
-        %:
+        %: // If operator entered is a "%", perform modulo operation 
         
-        <:
+        <: // If operator entered is a "<", left shift by specified amount (Num2)
         
-        >:
-
+        >: // If operator entered is a ">", right shift by specified amount (Num2)
         
+        &: // If operator entered is a "&", perform a logical AND operation
         
+        |: // If operator entered is a "|", perform a logical OR operation
         
+        ^: // If operator entered is a "^", perform a logical XOR operation
+        
+        ~: // If operator entered is a "~", negate num1
+        
+   default: // If none of the above symbols are used, 
+            // Prompt user to select a different symbol
+   
     }
    
     return Result;
