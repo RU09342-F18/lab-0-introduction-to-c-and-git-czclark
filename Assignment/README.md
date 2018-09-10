@@ -33,6 +33,8 @@
 #ifndef MATH_H_
 #define MATH_H_
 
+int math(int num1, int num2, char Operator);
+
 
 int math(int num1, int num2, char Operator)
 {
@@ -43,44 +45,53 @@ int math(int num1, int num2, char Operator)
     {
         +: // If operator entered is a "+", perform addition 
         
+           Result = num1 + num2;
+        
         -: // If operator entered is a "-", perform subtraction 
-        
+
+           Result = num1 - num2;
+           
         *: // If operator entered is a "*", perform multiplication 
-        
+
+           Result = num1 * num2;
+
         /: // If operator entered is a "/", perform division 
-        
+
+           Result = num1 / num2;
+
         %: // If operator entered is a "%", perform modulo operation 
+
+           Result = num1 % num2;
         
         <: // If operator entered is a "<", left shift by specified amount (Num2)
         
+           Result = num1 << num2;        
+        
         >: // If operator entered is a ">", right shift by specified amount (Num2)
+        
+           Result = num1 >> num2;
         
         &: // If operator entered is a "&", perform a logical AND operation
         
+           Result = num1 & num2;
+        
         |: // If operator entered is a "|", perform a logical OR operation
+          
+           Result = num1 | num2;
         
         ^: // If operator entered is a "^", perform a logical XOR operation
         
+           Result = num1 ^ num2;
+        
         ~: // If operator entered is a "~", negate num1
         
+           Result = ~num1;
+        
    default: // If none of the above symbols are used, 
-            // Prompt user to select a different symbol
-   
+            // Prompt user to restart program    
     }
    
     return Result;
-}
-
-
-int main()
-{
-    int num1;
-    int num2;
-    char Operator;
-    
-    
-    math (num1, num2, Operator);
-    return 0;
 }
 
 #endif /* MATH_H_ */
