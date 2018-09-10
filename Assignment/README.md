@@ -59,72 +59,67 @@ int math(int num1, int num2, char Operator) //
         // Symbols for Operator "char" must be entered 
         // exactly as shown in the switch statement
 
-        '+': // If operator entered is a "+", perform addition 
+    case '+': // If operator entered is a "+", perform addition 
         
            Result = num1 + num2;
            break;
         
-        '-': // If operator entered is a "-", perform subtraction 
+    case '-': // If operator entered is a "-", perform subtraction 
 
            Result = num1 - num2;
            break;
            
-        '*': // If operator entered is a "*", perform multiplication 
+    case '*': // If operator entered is a "*", perform multiplication 
 
            Result = num1 * num2;
            break;
 
-        '/': // If operator entered is a "/", perform division 
+    case '/': // If operator entered is a "/", perform division 
 
            Result = num1 / num2;
            break;
 
-        '%': // If operator entered is a "%", perform modulo operation 
+    case '%': // If operator entered is a "%", perform modulo operation 
 
            Result = num1 % num2;
            break;
         
-        '<': // If operator entered is a "<", left shift by specified amount (Num2)
+    case '<': // If operator entered is a "<", left shift by specified amount (Num2)
         
            Result = num1 << num2;   
            break;
         
-        '>': // If operator entered is a ">", right shift by specified amount (Num2)
+    case '>': // If operator entered is a ">", right shift by specified amount (Num2)
         
            Result = num1 >> num2;
            break;
         
-        '&': // If operator entered is a "&", perform a logical AND operation
+    case '&': // If operator entered is a "&", perform a logical AND operation
         
            Result = num1 & num2;
            break;
         
-        '|': // If operator entered is a "|", perform a logical OR operation
+    case  '|': // If operator entered is a "|", perform a logical OR operation
           
            Result = num1 | num2;
            break;
         
-        '^': // If operator entered is a "^", perform a logical XOR operation
+    case '^': // If operator entered is a "^", perform a logical XOR operation
         
            Result = num1 ^ num2;
            break;
         
-        '~': // If operator entered is a "~", negate num1
+    case '~': // If operator entered is a "~", negate num1
         
            Result = ~num1;
            break;
         
-   default: // If none of the above symbols are used, 
-            // Prompt user to restart program 
-            
-           Result = 0;
-           printf("An invalid operator was inputted in the function \n"
-                  "Please restart the program with the proper operator \n);
-           break;
-    }
-   
-    return Result;
+   	default:
+        Result = 0;
+		printf("An invalid operator was inputted in the function \n");
+	    printf("Please restart the program with the proper operator \n");
+			break;
+	}
+
+	return Result;
 }
-
-
-
