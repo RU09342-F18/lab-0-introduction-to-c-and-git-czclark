@@ -45,63 +45,83 @@ int math(int num1, int num2, char Operator);
 // math.c
 
 
-int math(int num1, int num2, char Operator)
+int math(int num1, int num2, char Operator) // 
 {
 
-    int Result;
+    int Result; // Holds solution to operation described in arguments
+                // of the math function 
     
-// Symbols for operators for each operation must be entered 
-// exactly as shown below (under switch statement)
+// The different operations that can be performed using this 
+// function are listed under the switch statement
 
     switch(Operator)
     {
+        // Symbols for Operator "char" must be entered 
+        // exactly as shown in the switch statement
+
         +: // If operator entered is a "+", perform addition 
         
            Result = num1 + num2;
-           printf(num1 "+" num2 "="
+           printf("
+           break;
         
         -: // If operator entered is a "-", perform subtraction 
 
            Result = num1 - num2;
+           break;
            
         *: // If operator entered is a "*", perform multiplication 
 
            Result = num1 * num2;
+           break;
 
         /: // If operator entered is a "/", perform division 
 
            Result = num1 / num2;
+           break;
 
         %: // If operator entered is a "%", perform modulo operation 
 
            Result = num1 % num2;
+           break;
         
         <: // If operator entered is a "<", left shift by specified amount (Num2)
         
-           Result = num1 << num2;        
+           Result = num1 << num2;   
+           break;
         
         >: // If operator entered is a ">", right shift by specified amount (Num2)
         
            Result = num1 >> num2;
+           break;
         
         &: // If operator entered is a "&", perform a logical AND operation
         
            Result = num1 & num2;
+           break;
         
         |: // If operator entered is a "|", perform a logical OR operation
           
            Result = num1 | num2;
+           break;
         
         ^: // If operator entered is a "^", perform a logical XOR operation
         
            Result = num1 ^ num2;
+           break;
         
         ~: // If operator entered is a "~", negate num1
         
            Result = ~num1;
+           break;
         
    default: // If none of the above symbols are used, 
-            // Prompt user to restart program    
+            // Prompt user to restart program 
+            
+           Result = 0;
+           printf("An invalid operator was inputted in the function \n"
+                  "Please restart the program with the proper operator);
+           break;
     }
    
     return Result;
