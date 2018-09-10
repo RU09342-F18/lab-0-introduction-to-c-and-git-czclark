@@ -62,7 +62,6 @@ int math(int num1, int num2, char Operator) //
         +: // If operator entered is a "+", perform addition 
         
            Result = num1 + num2;
-           printf("
            break;
         
         -: // If operator entered is a "-", perform subtraction 
